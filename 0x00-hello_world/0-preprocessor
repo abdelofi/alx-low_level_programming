@@ -1,13 +1,13 @@
-#!/bin/bash
+$ export CFILE=main.c
+$ ./0-preprocessor
+$ tail c
+# 942 "/usr/include/stdio.h" 3 4
 
-# Get the C file name from the environment variable
-CFILE="$CFILE"
+# 2 "main.c" 2
 
-# Check if the C file exists
-if [ ! -f "$CFILE" ]; then
-  echo "Error: C file $CFILE not found"
-  exit 1
-fi
 
-# Run the preprocessor and save the result to c
-gcc -E "$CFILE" -o c
+# 3 "main.c"
+int main(void)
+{
+    return (0);
+}
