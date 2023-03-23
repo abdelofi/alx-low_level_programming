@@ -1,4 +1,6 @@
 #include "main.h"
+#ifndef MAIN_H
+#define MAIN_H
 
 /**
  * print_alphabet - prints the alphabet in lowercase followed by a new line.
@@ -14,5 +16,6 @@ void print_alphabet(void)
         _putchar(c);
     }
 
-    _putchar('\n');
+    write(1, "\n", 1);
 }
+#endif /* MAIN_H */
