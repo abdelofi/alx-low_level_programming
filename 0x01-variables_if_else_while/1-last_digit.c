@@ -18,6 +18,9 @@ else if (n % 10 == 0)
 printf("and is 0\n");
 else
 printf("and is less than 6 and not 0\n");
+<<<<<<< HEAD
 
+=======
+>>>>>>> d11524097c14b8fe96ceecc3d7c2405901cef3ca
 return (0);
 }
