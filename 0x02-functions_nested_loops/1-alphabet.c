@@ -16,6 +16,5 @@ void print_alphabet(void)
         _putchar(c);
     }
 
-    write(1, "\n", 1);
+    write('\n');
 }
-#endif /* MAIN_H */
