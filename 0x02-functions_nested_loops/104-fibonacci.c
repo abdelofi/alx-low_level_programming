@@ -1,20 +1,43 @@
-#include <stdio.h>
+#include "main.h"
 
-int main(void) {
-    int a = 1, b = 2, c, i;
+/**
+ * fibonacci - Prints the first 98 Fibonacci numbers.
+ */
+void fibonacci(void)
+{
+    int i;
+    unsigned long num1 = 1, num2 = 2, fib;
 
-    printf("%d, %d, ", a, b);
+    _putchar('1');
+    _putchar(',');
+    _putchar(' ');
+    _putchar('2');
+    _putchar(',');
+    _putchar(' ');
 
-    for (i = 3; i <= 98; i++) {
-        c = a + b;
-        printf("%d", c);
-        if (i < 98) {
-            printf(", ");
+    for (i = 0; i < 96; i++)
+    {
+        fib = num1 + num2;
+        _putchar(fib / 1000000000 + '0');
+        _putchar(fib / 100000000 % 10 + '0');
+        _putchar(fib / 10000000 % 10 + '0');
+        _putchar(fib / 1000000 % 10 + '0');
+        _putchar(fib / 100000 % 10 + '0');
+        _putchar(fib / 10000 % 10 + '0');
+        _putchar(fib / 1000 % 10 + '0');
+        _putchar(fib / 100 % 10 + '0');
+        _putchar(fib / 10 % 10 + '0');
+        _putchar(fib % 10 + '0');
+
+        if (i != 95)
+        {
+            _putchar(',');
+            _putchar(' ');
         }
-        a = b;
-        b = c;
+
+        num1 = num2;
+        num2 = fib;
     }
 
-    printf("\n");
-    return 0;
+    _putchar('\n');
 }
