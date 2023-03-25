@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-    int i;
-    long int a = 1, b = 2, c;
+int i;
+long int a = 1, b = 2, c;
 
     _putchar('1');
-    for (i = 2; i <= 98; i++)
+for (i = 2; i <= 98; i++)
     {
         _putchar(',');
         _putchar(' ');
@@ -22,5 +22,5 @@ int main(void)
     }
     _putchar('\n');
 
-    return (0);
+return (0);
 }
