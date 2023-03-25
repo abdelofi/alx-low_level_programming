@@ -1,24 +1,16 @@
-#include "main.h"
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-int i;
-long int a = 1, b = 2, c;
-_putchar('1');
-for (i = 2; i <= 98; i++)
-{
-_putchar(',');
-_putchar(' ');
-_putchar(a + '0');
+#include <stdio.h>
+int main(void) {
+int a = 1, b = 2, c, i;
+printf("%d, %d, ", a, b);
+for (i = 3; i <= 98; i++) {
 c = a + b;
+printf("%d", c);
+if (i < 98) {
+printf(", ");
+}
 a = b;
 b = c;
 }
-_putchar('\n');
-return (0);
+printf("\n");
+return 0;
 }
