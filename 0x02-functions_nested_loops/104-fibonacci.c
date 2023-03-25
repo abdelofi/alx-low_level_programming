@@ -1,16 +1,16 @@
-#include <stdio.h>
+#include<stdio.h>
 int main(void)
 {
-int count, n1 = 0, n2 = 1, next;
-for (count = 1; count <= 98; count++)
-{
-next = n1 + n2;
-n1 = n2;
-n2 = next;
-printf("%d", next);
-if (count != 98)
-printf(", ");
-}
-printf("\n");
-return 0;
+    long int a = 1, b = 2, c;
+    int i;
+    printf("%ld, %ld", a, b);
+    for (i = 3; i <= 98; i++)
+    {
+        c = a + b;
+        printf(", %ld", c);
+        a = b;
+        b = c;
+    }
+    printf("\n");
+    return (0);
 }
