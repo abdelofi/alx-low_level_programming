@@ -1,7 +1,2 @@
 #!/bin/bash
-
-# Get the C file name from the environment variable
-cfile=$CFILE
-
-# Run the C file through the preprocessor and save the result to "c"
-cpp -E $cfile > c
+gcc -E "$CFILE" > c
