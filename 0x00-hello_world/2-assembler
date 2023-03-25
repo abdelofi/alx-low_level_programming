@@ -1,7 +1,2 @@
 #!/bin/bash
-
-# get the C file name from the environment variable
-CFILE=${CFILE:-"main.c"}
-
-# generate the assembly code and save it in a file with the same name but .s extension
 gcc -S $CFILE -o ${CFILE%.c}.s
