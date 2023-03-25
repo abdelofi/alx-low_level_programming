@@ -5,21 +5,24 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-    long int fib1 = 1, fib2 = 2, fib_sum = 0, even_sum = 0;
+    int term1 = 1, term2 = 2, next_term, sum = 2;
 
-    while (fib2 <= 4000000)
+    while (term2 < 4000000)
     {
-        if (fib2 % 2 == 0)
-            even_sum += fib2;
+        next_term = term1 + term2;
+        term1 = term2;
+        term2 = next_term;
 
-        fib_sum = fib1 + fib2;
-        fib1 = fib2;
-        fib2 = fib_sum;
+        if (term2 % 2 == 0)
+        {
+            sum += term2;
+        }
     }
 
-    printf("%ld\n", even_sum);
+    printf("%d\n", sum);
 
-    return 0;
+    return (0);
 }
