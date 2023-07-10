@@ -1,0 +1,33 @@
+#include <unistd.h>
+#include <fcntl.h>
+#include "main.h"
+
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+    int file_descriptor, bytes_read, bytes_written;
+    char buffer[1024];
+
+    if (filename == NULL)
+        return (0);
+
+    file_descriptor = open(filename, O_RDONLY);
+    if (file_descriptor == -1)
+        return (0);
+
+    bytes_read = read(file_descriptor, buffer, letters);
+    if (bytes_read == -1)
+    {
+        close(file_descriptor);
+        return (0);
+    }
+
+    bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+    if (bytes_written == -1 || bytes_written != bytes_read)
+    {
+        close(file_descriptor);
+        return (0);
+    }
+
+    close(file_descriptor);
+    return (bytes_written);
+}
